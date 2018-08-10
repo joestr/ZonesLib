@@ -1,0 +1,12 @@
+main: net.dertod2.ZonesLib.Binary.ZonesLib
+
+name: ZonesLib
+version: 0.1.1
+author: DerTod2
+website: http://dertod2.net/
+depend: [DatabaseHandler]
+
+commands:
+  'zoneslib':
+    aliases: ['zl']
+    usage: /<command>

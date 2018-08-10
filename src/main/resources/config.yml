@@ -1,0 +1,4 @@
+# Should the plugin automatically search for new updates?
+check-for-updates: true
+# Automatically downloads updates to the updates folder of the server. The server owner only needs to restart the server
+download-updates: false
