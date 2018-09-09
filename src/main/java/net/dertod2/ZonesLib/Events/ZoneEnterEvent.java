@@ -6,8 +6,8 @@ import net.dertod2.ZonesLib.Classes.Zone;
 
 public class ZoneEnterEvent extends ZoneEvent {
 
-	public ZoneEnterEvent(Player player, Zone zone) {
-		super(player, zone);
-	}
+    public ZoneEnterEvent(Player player, Zone zone) {
+        super(player, zone);
+    }
 
 }
