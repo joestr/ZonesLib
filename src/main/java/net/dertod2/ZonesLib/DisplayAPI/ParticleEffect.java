@@ -1362,11 +1362,11 @@ public enum ParticleEffect {
             try {
                 version = Integer.parseInt(Character.toString(PackageType.getServerVersion().charAt(3)));
                 String versionDot = Character.toString(PackageType.getServerVersion().charAt(4)); // joestr: Fixing version check by getting the fifth element
-                if (version > 7) {
+                if (version > 7 && versionDot.equals(".")) { // joestr: Fixing version check
                     enumParticle = PackageType.MINECRAFT_SERVER.getClass("EnumParticle");
                 }
                 Class<?> packetClass = PackageType.MINECRAFT_SERVER
-                        .getClass(version < 7 && versionDot.equals(".") ? "Packet63WorldParticles" : "PacketPlayOutWorldParticles"); // joestr: Fixing version check
+                        .getClass(version < 7 && !versionDot.equals(".") ? "Packet63WorldParticles" : "PacketPlayOutWorldParticles"); // joestr: Fixing version check
                 packetConstructor = ReflectionUtils.getConstructor(packetClass);
                 getHandle = ReflectionUtils.getMethod("CraftPlayer", PackageType.CRAFTBUKKIT_ENTITY, "getHandle");
                 playerConnection = ReflectionUtils.getField("EntityPlayer", PackageType.MINECRAFT_SERVER, false,
