@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.vdurmont.semver4j.Semver;
+
 import net.dertod2.ZonesLib.DisplayAPI.ReflectionUtils.PackageType;
 
 import org.bukkit.Bukkit;
@@ -1360,13 +1362,12 @@ public enum ParticleEffect {
                 return;
             }
             try {
-                version = Integer.parseInt(Character.toString(PackageType.getServerVersion().charAt(3)));
-                String versionDot = Character.toString(PackageType.getServerVersion().charAt(4)); // joestr: Fixing version check by getting the fifth element
-                if (version > 7 && versionDot.equals(".")) { // joestr: Fixing version check
+                version = new Semver(PackageType.getServerVersion()).getMinor(); // joestr: Fixing version check by getting the minor version
+                if (version > 7) {
                     enumParticle = PackageType.MINECRAFT_SERVER.getClass("EnumParticle");
                 }
                 Class<?> packetClass = PackageType.MINECRAFT_SERVER
-                        .getClass(version < 7 && !versionDot.equals(".") ? "Packet63WorldParticles" : "PacketPlayOutWorldParticles"); // joestr: Fixing version check
+                        .getClass(version < 7 ? "Packet63WorldParticles" : "PacketPlayOutWorldParticles");
                 packetConstructor = ReflectionUtils.getConstructor(packetClass);
                 getHandle = ReflectionUtils.getMethod("CraftPlayer", PackageType.CRAFTBUKKIT_ENTITY, "getHandle");
                 playerConnection = ReflectionUtils.getField("EntityPlayer", PackageType.MINECRAFT_SERVER, false,
