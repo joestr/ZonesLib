@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.vdurmont.semver4j.Semver;
-
 import net.dertod2.ZonesLib.DisplayAPI.ReflectionUtils.PackageType;
 
 import org.bukkit.Bukkit;
@@ -1362,8 +1360,8 @@ public enum ParticleEffect {
                 return;
             }
             try {
-                version = new Semver(PackageType.getServerVersion()).getMinor(); // joestr: Fixing version check by getting the minor version
-                if (version > 7) {
+                version = Integer.parseInt(PackageType.getServerVersion().split("_")[1]); // joestr: Fixing version check by getting the minor version
+                if (version > 7 && version < 13) { // joestr: Fixing version check
                     enumParticle = PackageType.MINECRAFT_SERVER.getClass("EnumParticle");
                 }
                 Class<?> packetClass = PackageType.MINECRAFT_SERVER
