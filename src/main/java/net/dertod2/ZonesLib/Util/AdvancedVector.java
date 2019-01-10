@@ -39,9 +39,12 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Construct an instance.
      *
-     * @param x the X coordinate
-     * @param y the Y coordinate
-     * @param z the Z coordinate
+     * @param x
+     *            the X coordinate
+     * @param y
+     *            the Y coordinate
+     * @param z
+     *            the Z coordinate
      */
     public AdvancedVector(double x, double y, double z) {
         this.x = x;
@@ -52,9 +55,12 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Construct an instance.
      *
-     * @param x the X coordinate
-     * @param y the Y coordinate
-     * @param z the Z coordinate
+     * @param x
+     *            the X coordinate
+     * @param y
+     *            the Y coordinate
+     * @param z
+     *            the Z coordinate
      */
     public AdvancedVector(int x, int y, int z) {
         this.x = (double) x;
@@ -65,9 +71,12 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Construct an instance.
      *
-     * @param x the X coordinate
-     * @param y the Y coordinate
-     * @param z the Z coordinate
+     * @param x
+     *            the X coordinate
+     * @param y
+     *            the Y coordinate
+     * @param z
+     *            the Z coordinate
      */
     public AdvancedVector(float x, float y, float z) {
         this.x = (double) x;
@@ -78,7 +87,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Copy another vector.
      *
-     * @param other another vector to make a copy of
+     * @param other
+     *            another vector to make a copy of
      */
     public AdvancedVector(AdvancedVector other) {
         this.x = other.x;
@@ -91,17 +101,19 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
         this.y = vector.getY();
         this.z = vector.getZ();
     }
-    
+
     /**
      * Construct a new instance with X, Y, and Z coordinates set to 0.
      *
-     * <p>One can also refer to a static {@link #ZERO}.</p>
+     * <p>
+     * One can also refer to a static {@link #ZERO}.
+     * </p>
      */
     public AdvancedVector() {
         this.x = 0;
         this.y = 0;
         this.z = 0;
-    }  
+    }
 
     /**
      * Get the X coordinate.
@@ -124,7 +136,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Set the X coordinate.
      *
-     * @param x the new X
+     * @param x
+     *            the new X
      * @return a new vector
      */
     public AdvancedVector setX(double x) {
@@ -134,7 +147,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Set the X coordinate.
      *
-     * @param x the X coordinate
+     * @param x
+     *            the X coordinate
      * @return new vector
      */
     public AdvancedVector setX(int x) {
@@ -162,7 +176,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Set the Y coordinate.
      *
-     * @param y the new Y
+     * @param y
+     *            the new Y
      * @return a new vector
      */
     public AdvancedVector setY(double y) {
@@ -172,7 +187,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Set the Y coordinate.
      *
-     * @param y the new Y
+     * @param y
+     *            the new Y
      * @return a new vector
      */
     public AdvancedVector setY(int y) {
@@ -200,7 +216,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Set the Z coordinate.
      *
-     * @param z the new Z
+     * @param z
+     *            the new Z
      * @return a new vector
      */
     public AdvancedVector setZ(double z) {
@@ -210,7 +227,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Set the Z coordinate.
      *
-     * @param z the new Z
+     * @param z
+     *            the new Z
      * @return a new vector
      */
     public AdvancedVector setZ(int z) {
@@ -220,7 +238,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Add another vector to this vector and return the result as a new vector.
      *
-     * @param other the other vector
+     * @param other
+     *            the other vector
      * @return a new vector
      */
     public AdvancedVector add(AdvancedVector other) {
@@ -230,9 +249,12 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Add another vector to this vector and return the result as a new vector.
      *
-     * @param x the value to add
-     * @param y the value to add
-     * @param z the value to add
+     * @param x
+     *            the value to add
+     * @param y
+     *            the value to add
+     * @param z
+     *            the value to add
      * @return a new vector
      */
     public AdvancedVector add(double x, double y, double z) {
@@ -242,9 +264,12 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Add another vector to this vector and return the result as a new vector.
      *
-     * @param x the value to add
-     * @param y the value to add
-     * @param z the value to add
+     * @param x
+     *            the value to add
+     * @param y
+     *            the value to add
+     * @param z
+     *            the value to add
      * @return a new vector
      */
     public AdvancedVector add(int x, int y, int z) {
@@ -252,10 +277,10 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     }
 
     /**
-     * Add a list of vectors to this vector and return the
-     * result as a new vector.
+     * Add a list of vectors to this vector and return the result as a new vector.
      *
-     * @param others an array of vectors
+     * @param others
+     *            an array of vectors
      * @return a new vector
      */
     public AdvancedVector add(AdvancedVector... others) {
@@ -271,10 +296,11 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     }
 
     /**
-     * Subtract another vector from this vector and return the result
-     * as a new vector.
+     * Subtract another vector from this vector and return the result as a new
+     * vector.
      *
-     * @param other the other vector
+     * @param other
+     *            the other vector
      * @return a new vector
      */
     public AdvancedVector subtract(AdvancedVector other) {
@@ -282,12 +308,15 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     }
 
     /**
-     * Subtract another vector from this vector and return the result
-     * as a new vector.
+     * Subtract another vector from this vector and return the result as a new
+     * vector.
      *
-     * @param x the value to subtract
-     * @param y the value to subtract
-     * @param z the value to subtract
+     * @param x
+     *            the value to subtract
+     * @param y
+     *            the value to subtract
+     * @param z
+     *            the value to subtract
      * @return a new vector
      */
     public AdvancedVector subtract(double x, double y, double z) {
@@ -295,12 +324,15 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     }
 
     /**
-     * Subtract another vector from this vector and return the result
-     * as a new vector.
+     * Subtract another vector from this vector and return the result as a new
+     * vector.
      *
-     * @param x the value to subtract
-     * @param y the value to subtract
-     * @param z the value to subtract
+     * @param x
+     *            the value to subtract
+     * @param y
+     *            the value to subtract
+     * @param z
+     *            the value to subtract
      * @return a new vector
      */
     public AdvancedVector subtract(int x, int y, int z) {
@@ -308,10 +340,11 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     }
 
     /**
-     * Subtract a list of vectors from this vector and return the result
-     * as a new vector.
+     * Subtract a list of vectors from this vector and return the result as a new
+     * vector.
      *
-     * @param others an array of vectors
+     * @param others
+     *            an array of vectors
      * @return a new vector
      */
     public AdvancedVector subtract(AdvancedVector... others) {
@@ -329,7 +362,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Multiply this vector by another vector on each component.
      *
-     * @param other the other vector
+     * @param other
+     *            the other vector
      * @return a new vector
      */
     public AdvancedVector multiply(AdvancedVector other) {
@@ -339,9 +373,12 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Multiply this vector by another vector on each component.
      *
-     * @param x the value to multiply
-     * @param y the value to multiply
-     * @param z the value to multiply
+     * @param x
+     *            the value to multiply
+     * @param y
+     *            the value to multiply
+     * @param z
+     *            the value to multiply
      * @return a new vector
      */
     public AdvancedVector multiply(double x, double y, double z) {
@@ -351,9 +388,12 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Multiply this vector by another vector on each component.
      *
-     * @param x the value to multiply
-     * @param y the value to multiply
-     * @param z the value to multiply
+     * @param x
+     *            the value to multiply
+     * @param y
+     *            the value to multiply
+     * @param z
+     *            the value to multiply
      * @return a new vector
      */
     public AdvancedVector multiply(int x, int y, int z) {
@@ -363,7 +403,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Multiply this vector by zero or more vectors on each component.
      *
-     * @param others an array of vectors
+     * @param others
+     *            an array of vectors
      * @return a new vector
      */
     public AdvancedVector multiply(AdvancedVector... others) {
@@ -381,7 +422,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Perform scalar multiplication and return a new vector.
      *
-     * @param n the value to multiply
+     * @param n
+     *            the value to multiply
      * @return a new vector
      */
     public AdvancedVector multiply(double n) {
@@ -391,7 +433,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Perform scalar multiplication and return a new vector.
      *
-     * @param n the value to multiply
+     * @param n
+     *            the value to multiply
      * @return a new vector
      */
     public AdvancedVector multiply(float n) {
@@ -401,7 +444,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Perform scalar multiplication and return a new vector.
      *
-     * @param n the value to multiply
+     * @param n
+     *            the value to multiply
      * @return a new vector
      */
     public AdvancedVector multiply(int n) {
@@ -411,7 +455,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Divide this vector by another vector on each component.
      *
-     * @param other the other vector
+     * @param other
+     *            the other vector
      * @return a new vector
      */
     public AdvancedVector divide(AdvancedVector other) {
@@ -421,9 +466,12 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Divide this vector by another vector on each component.
      *
-     * @param x the value to divide by
-     * @param y the value to divide by
-     * @param z the value to divide by
+     * @param x
+     *            the value to divide by
+     * @param y
+     *            the value to divide by
+     * @param z
+     *            the value to divide by
      * @return a new vector
      */
     public AdvancedVector divide(double x, double y, double z) {
@@ -433,9 +481,12 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Divide this vector by another vector on each component.
      *
-     * @param x the value to divide by
-     * @param y the value to divide by
-     * @param z the value to divide by
+     * @param x
+     *            the value to divide by
+     * @param y
+     *            the value to divide by
+     * @param z
+     *            the value to divide by
      * @return a new vector
      */
     public AdvancedVector divide(int x, int y, int z) {
@@ -445,7 +496,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Perform scalar division and return a new vector.
      *
-     * @param n the value to divide by
+     * @param n
+     *            the value to divide by
      * @return a new vector
      */
     public AdvancedVector divide(int n) {
@@ -455,7 +507,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Perform scalar division and return a new vector.
      *
-     * @param n the value to divide by
+     * @param n
+     *            the value to divide by
      * @return a new vector
      */
     public AdvancedVector divide(double n) {
@@ -465,7 +518,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Perform scalar division and return a new vector.
      *
-     * @param n the value to divide by
+     * @param n
+     *            the value to divide by
      * @return a new vector
      */
     public AdvancedVector divide(float n) {
@@ -493,30 +547,28 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Get the distance between this vector and another vector.
      *
-     * @param other the other vector
+     * @param other
+     *            the other vector
      * @return distance
      */
     public double distance(AdvancedVector other) {
-        return Math.sqrt(Math.pow(other.x - x, 2) +
-                Math.pow(other.y - y, 2) +
-                Math.pow(other.z - z, 2));
+        return Math.sqrt(Math.pow(other.x - x, 2) + Math.pow(other.y - y, 2) + Math.pow(other.z - z, 2));
     }
 
     /**
      * Get the distance between this vector and another vector, squared.
      *
-     * @param other the other vector
+     * @param other
+     *            the other vector
      * @return distance
      */
     public double distanceSq(AdvancedVector other) {
-        return Math.pow(other.x - x, 2) +
-                Math.pow(other.y - y, 2) +
-                Math.pow(other.z - z, 2);
+        return Math.pow(other.x - x, 2) + Math.pow(other.y - y, 2) + Math.pow(other.z - z, 2);
     }
 
     /**
-     * Get the normalized vector, which is the vector divided by its
-     * length, as a new vector.
+     * Get the normalized vector, which is the vector divided by its length, as a
+     * new vector.
      *
      * @return a new vector
      */
@@ -527,7 +579,8 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Gets the dot product of this and another vector.
      *
-     * @param other the other vector
+     * @param other
+     *            the other vector
      * @return the dot product of this and the other vector
      */
     public double dot(AdvancedVector other) {
@@ -537,22 +590,21 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Gets the cross product of this and another vector.
      *
-     * @param other the other vector
+     * @param other
+     *            the other vector
      * @return the cross product of this and the other vector
      */
     public AdvancedVector cross(AdvancedVector other) {
-        return new AdvancedVector(
-            y * other.z - z * other.y,
-            z * other.x - x * other.z,
-            x * other.y - y * other.x
-        );
+        return new AdvancedVector(y * other.z - z * other.y, z * other.x - x * other.z, x * other.y - y * other.x);
     }
 
     /**
      * Checks to see if a vector is contained with another.
      *
-     * @param min the minimum point (X, Y, and Z are the lowest)
-     * @param max the maximum point (X, Y, and Z are the lowest)
+     * @param min
+     *            the minimum point (X, Y, and Z are the lowest)
+     * @param max
+     *            the maximum point (X, Y, and Z are the lowest)
      * @return true if the vector is contained
      */
     public boolean containedWithin(AdvancedVector min, AdvancedVector max) {
@@ -560,24 +612,27 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     }
 
     /**
-     * Checks to see if a vector is contained with another, comparing
-     * using discrete comparisons, inclusively.
+     * Checks to see if a vector is contained with another, comparing using discrete
+     * comparisons, inclusively.
      *
-     * @param min the minimum point (X, Y, and Z are the lowest)
-     * @param max the maximum point (X, Y, and Z are the lowest)
+     * @param min
+     *            the minimum point (X, Y, and Z are the lowest)
+     * @param max
+     *            the maximum point (X, Y, and Z are the lowest)
      * @return true if the vector is contained
      */
     public boolean containedWithinBlock(AdvancedVector min, AdvancedVector max) {
-        return getBlockX() >= min.getBlockX() && getBlockX() <= max.getBlockX()
-                && getBlockY() >= min.getBlockY() && getBlockY() <= max.getBlockY()
-                && getBlockZ() >= min.getBlockZ() && getBlockZ() <= max.getBlockZ();
+        return getBlockX() >= min.getBlockX() && getBlockX() <= max.getBlockX() && getBlockY() >= min.getBlockY()
+                && getBlockY() <= max.getBlockY() && getBlockZ() >= min.getBlockZ() && getBlockZ() <= max.getBlockZ();
     }
 
     /**
      * Clamp the Y component.
      *
-     * @param min the minimum value
-     * @param max the maximum value
+     * @param min
+     *            the minimum value
+     * @param max
+     *            the maximum value
      * @return a new vector
      */
     public AdvancedVector clampY(int min, int max) {
@@ -605,7 +660,9 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Rounds all components to the closest integer.
      *
-     * <p>Components &lt; 0.5 are rounded down, otherwise up.</p>
+     * <p>
+     * Components &lt; 0.5 are rounded down, otherwise up.
+     * </p>
      *
      * @return a new vector
      */
@@ -614,8 +671,7 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     }
 
     /**
-     * Returns a vector with the absolute values of the components of
-     * this vector.
+     * Returns a vector with the absolute values of the components of this vector.
      *
      * @return a new vector
      */
@@ -626,32 +682,35 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Perform a 2D transformation on this vector and return a new one.
      *
-     * @param angle in degrees
-     * @param aboutX about which x coordinate to rotate
-     * @param aboutZ about which z coordinate to rotate
-     * @param translateX what to add after rotation
-     * @param translateZ what to add after rotation
+     * @param angle
+     *            in degrees
+     * @param aboutX
+     *            about which x coordinate to rotate
+     * @param aboutZ
+     *            about which z coordinate to rotate
+     * @param translateX
+     *            what to add after rotation
+     * @param translateZ
+     *            what to add after rotation
      * @return a new vector
      * @see AffineTransform another method to transform vectors
      */
-    public AdvancedVector transform2D(double angle, double aboutX, double aboutZ, double translateX, double translateZ) {
+    public AdvancedVector transform2D(double angle, double aboutX, double aboutZ, double translateX,
+            double translateZ) {
         angle = Math.toRadians(angle);
         double x = this.x - aboutX;
         double z = this.z - aboutZ;
         double x2 = x * Math.cos(angle) - z * Math.sin(angle);
         double z2 = x * Math.sin(angle) + z * Math.cos(angle);
 
-        return new AdvancedVector(
-            x2 + aboutX + translateX,
-            y,
-            z2 + aboutZ + translateZ
-        );
+        return new AdvancedVector(x2 + aboutX + translateX, y, z2 + aboutZ + translateZ);
     }
 
     /**
      * Returns whether this vector is collinear with another vector.
      *
-     * @param other the other vector
+     * @param other
+     *            the other vector
      * @return true if collinear
      */
     public boolean isCollinearWith(AdvancedVector other) {
@@ -669,9 +728,12 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
             return true;
         }
 
-        if ((x == 0) != (otherX == 0)) return false;
-        if ((y == 0) != (otherY == 0)) return false;
-        if ((z == 0) != (otherZ == 0)) return false;
+        if ((x == 0) != (otherX == 0))
+            return false;
+        if ((y == 0) != (otherY == 0))
+            return false;
+        if ((z == 0) != (otherZ == 0))
+            return false;
 
         final double quotientX = otherX / x;
         if (!Double.isNaN(quotientX)) {
@@ -728,17 +790,16 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Create a new {@code BlockVector} using the given components.
      *
-     * @param x the X coordinate
-     * @param y the Y coordinate
-     * @param z the Z coordinate
+     * @param x
+     *            the X coordinate
+     * @param y
+     *            the Y coordinate
+     * @param z
+     *            the Z coordinate
      * @return a new {@code BlockVector}
      */
     public static BlockVector toBlockPoint(double x, double y, double z) {
-        return new BlockVector(
-            Math.floor(x),
-            Math.floor(y),
-            Math.floor(z)
-        );
+        return new BlockVector(Math.floor(x), Math.floor(y), Math.floor(z));
     }
 
     /**
@@ -747,21 +808,17 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
      * @return a new {@code BlockVector}
      */
     public BlockVector toBlockPoint() {
-        return new BlockVector(
-            Math.floor(x),
-            Math.floor(y),
-            Math.floor(z)
-        );
+        return new BlockVector(Math.floor(x), Math.floor(y), Math.floor(z));
     }
-    
+
     public Vector toVector() {
         return new Vector(x, y, z);
     }
-    
+
     public Location toLocation(World world) {
         return new Location(world, x, y, z);
     }
-    
+
     public Location toLocation(World world, float yaw, float pitch) {
         return new Location(world, x, y, z, yaw, pitch);
     }
@@ -780,9 +837,12 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
         if (other == null) {
             throw new IllegalArgumentException("null not supported");
         }
-        if (y != other.y) return Double.compare(y, other.y);
-        if (z != other.z) return Double.compare(z, other.z);
-        if (x != other.x) return Double.compare(x, other.x);
+        if (y != other.y)
+            return Double.compare(y, other.y);
+        if (z != other.z)
+            return Double.compare(z, other.z);
+        if (x != other.x)
+            return Double.compare(x, other.x);
         return 0;
     }
 
@@ -804,46 +864,40 @@ public class AdvancedVector implements Comparable<AdvancedVector> {
     /**
      * Gets the minimum components of two vectors.
      *
-     * @param v1 the first vector
-     * @param v2 the second vector
+     * @param v1
+     *            the first vector
+     * @param v2
+     *            the second vector
      * @return minimum
      */
     public static AdvancedVector getMinimum(AdvancedVector v1, AdvancedVector v2) {
-        return new AdvancedVector(
-                Math.min(v1.x, v2.x),
-                Math.min(v1.y, v2.y),
-                Math.min(v1.z, v2.z)
-        );
+        return new AdvancedVector(Math.min(v1.x, v2.x), Math.min(v1.y, v2.y), Math.min(v1.z, v2.z));
     }
 
     /**
      * Gets the maximum components of two vectors.
      *
-     * @param v1 the first vector
-     * @param v2 the second vector
+     * @param v1
+     *            the first vector
+     * @param v2
+     *            the second vector
      * @return maximum
      */
     public static AdvancedVector getMaximum(AdvancedVector v1, AdvancedVector v2) {
-        return new AdvancedVector(
-                Math.max(v1.x, v2.x),
-                Math.max(v1.y, v2.y),
-                Math.max(v1.z, v2.z)
-        );
+        return new AdvancedVector(Math.max(v1.x, v2.x), Math.max(v1.y, v2.y), Math.max(v1.z, v2.z));
     }
 
     /**
      * Gets the midpoint of two vectors.
      *
-     * @param v1 the first vector
-     * @param v2 the second vector
+     * @param v1
+     *            the first vector
+     * @param v2
+     *            the second vector
      * @return maximum
      */
     public static AdvancedVector getMidpoint(AdvancedVector v1, AdvancedVector v2) {
-        return new AdvancedVector(
-                (v1.x + v2.x) / 2,
-                (v1.y + v2.y) / 2,
-                (v1.z + v2.z) / 2
-        );
+        return new AdvancedVector((v1.x + v2.x) / 2, (v1.y + v2.y) / 2, (v1.z + v2.z) / 2);
     }
 
 }
